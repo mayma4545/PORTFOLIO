@@ -471,10 +471,10 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-5);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
 }
-@media (min-width: 640px)  { .projects-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 640px)  { .projects-grid { gap: var(--space-5); } }
 @media (min-width: 1024px) { .projects-grid { grid-template-columns: 1fr 1fr 1fr; } }
 
 /* Project Card */
@@ -508,9 +508,9 @@
 .proj-card::after {
   content: '';
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--bg-card);
+  inset: 1px;
+  border-radius: calc(var(--radius-md) - 1px);
+  background: var(--bg-secondary);
   z-index: -1;
 }
 
@@ -556,10 +556,10 @@
 
 /* Card body */
 .proj-body {
-  padding: var(--space-5) var(--space-5) var(--space-6);
+  padding: var(--space-4) var(--space-4) var(--space-5);
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   flex: 1;
 }
 
