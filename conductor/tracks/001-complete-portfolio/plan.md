@@ -4,15 +4,15 @@
 
 ---
 
-## Phase 1: Foundation & Design System
+## Phase 1: Foundation & Design System [checkpoint: a96a97f]
 *Set up the HTML skeleton, CSS design system, and core infrastructure.*
 
-- [ ] **1.1** Create `index.html` with semantic HTML5 structure, meta tags, SEO essentials, and Google Fonts links
-- [ ] **1.2** Create `css/variables.css` with complete CSS custom properties (color tokens for dark/light modes, spacing scale, typography scale, gradient definitions, glass properties)
-- [ ] **1.3** Create `css/base.css` with CSS reset, global typography, body styling, and smooth scroll behavior
-- [ ] **1.4** Create `css/animations.css` with keyframe definitions (fade-in, slide-up, scale-in, gradient-shift) and utility classes for scroll-reveal
-- [ ] **1.5** Create `css/components.css` with reusable component styles (glass cards, gradient buttons, gradient borders, section containers)
-- [ ] **1.6** Create `js/main.js` with theme toggle functionality (dark/light mode with localStorage persistence) and smooth scroll navigation
+- [x] **1.1** Create `index.html` with semantic HTML5 structure, meta tags, SEO essentials, and Google Fonts links `a96a97f`
+- [x] **1.2** Create `css/variables.css` with complete CSS custom properties (color tokens for dark/light modes, spacing scale, typography scale, gradient definitions, glass properties) `a96a97f`
+- [x] **1.3** Create `css/base.css` with CSS reset, global typography, body styling, and smooth scroll behavior `a96a97f`
+- [x] **1.4** Create `css/animations.css` with keyframe definitions (fade-in, slide-up, scale-in, gradient-shift) and utility classes for scroll-reveal `a96a97f`
+- [x] **1.5** Create `css/components.css` with reusable component styles (glass cards, gradient buttons, gradient borders, section containers) `a96a97f`
+- [x] **1.6** Create `js/main.js` with theme toggle functionality (dark/light mode with localStorage persistence) and smooth scroll navigation `a96a97f`
 
 ## Phase 2: Navigation & Hero Section
 *Build the sticky glass navigation bar and the impactful hero section.*
