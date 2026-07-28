@@ -1,184 +1,146 @@
 /* ============================================================
-   DESIGN SYSTEM — CSS CUSTOM PROPERTIES
+   DESIGN SYSTEM — CSS CUSTOM PROPERTIES v2
    variables.css | Jasper A. Fernandez Portfolio
    ============================================================ */
 
-/* ── Dark Mode (Default) ──────────────────────────────────── */
 :root,
 [data-theme="dark"] {
-  /* Background */
-  --bg-primary:      #0a0a0f;
-  --bg-secondary:    #12121a;
-  --bg-tertiary:     #1a1a26;
-  --bg-glass:        rgba(255, 255, 255, 0.05);
-  --bg-glass-hover:  rgba(255, 255, 255, 0.08);
-  --bg-overlay:      rgba(10, 10, 15, 0.85);
+  --bg-primary:      #080810;
+  --bg-secondary:    #0f0f1a;
+  --bg-tertiary:     #16162a;
+  --bg-card:         rgba(255,255,255,0.04);
+  --bg-card-hover:   rgba(255,255,255,0.07);
+  --bg-overlay:      rgba(8,8,16,0.92);
+  --bg-nav:          rgba(8,8,16,0.75);
 
-  /* Text */
-  --text-primary:    #e8e8ed;
-  --text-secondary:  #8888a0;
-  --text-muted:      #55556a;
-  --text-inverse:    #0a0a0f;
+  --text-primary:    #f0f0f8;
+  --text-secondary:  #9090b0;
+  --text-muted:      #50507a;
+  --text-inverse:    #080810;
 
-  /* Borders */
-  --border-glass:    rgba(255, 255, 255, 0.10);
-  --border-subtle:   rgba(255, 255, 255, 0.06);
-  --border-strong:   rgba(255, 255, 255, 0.20);
+  --border-card:     rgba(255,255,255,0.08);
+  --border-hover:    rgba(255,255,255,0.18);
+  --border-glow:     rgba(139,92,246,0.5);
 
-  /* Gradients — primary (purple → cyan) */
-  --grad-1-start:    #7c3aed;
-  --grad-1-end:      #06b6d4;
-  --gradient-1:      linear-gradient(135deg, #7c3aed, #06b6d4);
+  /* ── Gradient Palette ─────────────────────────────────── */
+  --c-purple:  #8b5cf6;
+  --c-violet:  #7c3aed;
+  --c-cyan:    #06b6d4;
+  --c-pink:    #ec4899;
+  --c-orange:  #f97316;
+  --c-blue:    #3b82f6;
+  --c-indigo:  #6366f1;
 
-  /* Gradients — secondary (pink → orange) */
-  --grad-2-start:    #ec4899;
-  --grad-2-end:      #f97316;
-  --gradient-2:      linear-gradient(135deg, #ec4899, #f97316);
+  --gradient-1: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  --gradient-2: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  --gradient-3: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --gradient-hero: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 50%, #ec4899 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, #8b5cf640 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, #06b6d430 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, #ec489920 0px, transparent 50%),
+                   radial-gradient(at 80% 50%, #3b82f620 0px, transparent 50%),
+                   radial-gradient(at 0% 100%, #8b5cf620 0px, transparent 50%);
 
-  /* Gradients — tertiary (blue → violet) */
-  --grad-3-start:    #3b82f6;
-  --grad-3-end:      #8b5cf6;
-  --gradient-3:      linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --glow-purple: 0 0 60px rgba(139,92,246,0.3);
+  --glow-cyan:   0 0 60px rgba(6,182,212,0.2);
+  --glow-card:   0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
 
-  /* Animated gradient for hero */
-  --gradient-animated: linear-gradient(270deg, #7c3aed, #06b6d4, #ec4899, #f97316, #3b82f6);
+  --blur-sm: blur(8px);
+  --blur-md: blur(16px);
+  --blur-lg: blur(24px);
 
-  /* Glass blur */
-  --blur-sm:  blur(8px);
-  --blur-md:  blur(14px);
-  --blur-lg:  blur(20px);
-
-  /* Glow effects */
-  --glow-1:   0 0 40px rgba(124, 58, 237, 0.25);
-  --glow-2:   0 0 40px rgba(6, 182, 212, 0.20);
-  --glow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
-
-  /* Scrollbar */
-  --scrollbar-track: #12121a;
-  --scrollbar-thumb: rgba(124, 58, 237, 0.4);
+  --scrollbar-track: #0f0f1a;
+  --scrollbar-thumb: #8b5cf640;
 }
 
-/* ── Light Mode ───────────────────────────────────────────── */
 [data-theme="light"] {
-  /* Background */
   --bg-primary:      #fafafa;
-  --bg-secondary:    #f0f0f6;
-  --bg-tertiary:     #e8e8f0;
-  --bg-glass:        rgba(0, 0, 0, 0.03);
-  --bg-glass-hover:  rgba(0, 0, 0, 0.06);
-  --bg-overlay:      rgba(250, 250, 250, 0.90);
+  --bg-secondary:    #f3f3f8;
+  --bg-tertiary:     #e8e8f2;
+  --bg-card:         rgba(0,0,0,0.025);
+  --bg-card-hover:   rgba(0,0,0,0.05);
+  --bg-overlay:      rgba(250,250,250,0.92);
+  --bg-nav:          rgba(250,250,250,0.8);
 
-  /* Text */
-  --text-primary:    #1a1a2e;
-  --text-secondary:  #5a5a78;
-  --text-muted:      #9090a8;
+  --text-primary:    #12122a;
+  --text-secondary:  #555570;
+  --text-muted:      #9898b8;
   --text-inverse:    #fafafa;
 
-  /* Borders */
-  --border-glass:    rgba(0, 0, 0, 0.08);
-  --border-subtle:   rgba(0, 0, 0, 0.04);
-  --border-strong:   rgba(0, 0, 0, 0.18);
+  --border-card:     rgba(0,0,0,0.07);
+  --border-hover:    rgba(0,0,0,0.15);
+  --border-glow:     rgba(139,92,246,0.35);
 
-  /* Gradients — primary (purple → cyan) */
-  --grad-1-start:    #8b5cf6;
-  --grad-1-end:      #22d3ee;
-  --gradient-1:      linear-gradient(135deg, #8b5cf6, #22d3ee);
+  --c-purple:  #7c3aed;
+  --c-cyan:    #0891b2;
 
-  /* Gradients — secondary (pink → orange) */
-  --grad-2-start:    #f472b6;
-  --grad-2-end:      #fb923c;
-  --gradient-2:      linear-gradient(135deg, #f472b6, #fb923c);
+  --gradient-1: linear-gradient(135deg, #7c3aed 0%, #0891b2 100%);
+  --gradient-2: linear-gradient(135deg, #db2777 0%, #ea580c 100%);
+  --gradient-3: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --gradient-hero: linear-gradient(135deg, #7c3aed 0%, #0891b2 50%, #db2777 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, #7c3aed18 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, #0891b215 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, #db277712 0px, transparent 50%);
 
-  /* Gradients — tertiary (blue → violet) */
-  --grad-3-start:    #60a5fa;
-  --grad-3-end:      #a78bfa;
-  --gradient-3:      linear-gradient(135deg, #60a5fa, #a78bfa);
+  --glow-purple: 0 0 40px rgba(124,58,237,0.15);
+  --glow-card:   0 8px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.06);
 
-  /* Animated gradient for hero */
-  --gradient-animated: linear-gradient(270deg, #8b5cf6, #22d3ee, #f472b6, #fb923c, #60a5fa);
-
-  /* Glow effects */
-  --glow-1:   0 0 40px rgba(139, 92, 246, 0.15);
-  --glow-2:   0 0 40px rgba(34, 211, 238, 0.12);
-  --glow-card: 0 8px 32px rgba(0, 0, 0, 0.10);
-
-  /* Scrollbar */
-  --scrollbar-track: #f0f0f6;
-  --scrollbar-thumb: rgba(139, 92, 246, 0.4);
+  --scrollbar-track: #f3f3f8;
+  --scrollbar-thumb: #7c3aed40;
 }
 
-/* ── Spacing Scale (8px base grid) ───────────────────────── */
+/* ── Spacing (8px grid) ───────────────────────────────────── */
 :root {
-  --space-1:   4px;
-  --space-2:   8px;
-  --space-3:   12px;
-  --space-4:   16px;
-  --space-5:   20px;
-  --space-6:   24px;
-  --space-8:   32px;
-  --space-10:  40px;
-  --space-12:  48px;
-  --space-16:  64px;
-  --space-20:  80px;
-  --space-24:  96px;
-  --space-32:  128px;
+  --space-1:  4px;   --space-2:  8px;   --space-3:  12px;
+  --space-4:  16px;  --space-5:  20px;  --space-6:  24px;
+  --space-8:  32px;  --space-10: 40px;  --space-12: 48px;
+  --space-16: 64px;  --space-20: 80px;  --space-24: 96px;
+  --space-32: 128px;
 
-  /* ── Typography ──────────────────────────────────────────── */
-  --font-heading:  'Space Grotesk', system-ui, sans-serif;
-  --font-body:     'Inter', system-ui, sans-serif;
-  --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
 
-  --text-xs:    0.75rem;    /* 12px */
-  --text-sm:    0.875rem;   /* 14px */
-  --text-base:  1rem;       /* 16px */
-  --text-lg:    1.125rem;   /* 18px */
-  --text-xl:    1.25rem;    /* 20px */
-  --text-2xl:   1.5rem;     /* 24px */
-  --text-3xl:   1.875rem;   /* 30px */
-  --text-4xl:   2.25rem;    /* 36px */
-  --text-5xl:   3rem;       /* 48px */
-  --text-6xl:   3.75rem;    /* 60px */
-  --text-7xl:   4.5rem;     /* 72px */
+  --text-xs:   0.75rem;   --text-sm:   0.875rem;  --text-base: 1rem;
+  --text-lg:   1.125rem;  --text-xl:   1.25rem;   --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;  --text-4xl:  2.25rem;   --text-5xl:  3rem;
+  --text-6xl:  3.75rem;   --text-7xl:  4.5rem;    --text-8xl:  6rem;
 
-  --weight-regular: 400;
-  --weight-medium:  500;
+  --weight-regular:  400;
+  --weight-medium:   500;
   --weight-semibold: 600;
-  --weight-bold:    700;
+  --weight-bold:     700;
+  --weight-black:    900;
 
-  --leading-tight:  1.2;
-  --leading-snug:   1.4;
+  --leading-tight:  1.1;
+  --leading-snug:   1.3;
   --leading-normal: 1.6;
+  --tracking-tight: -0.03em;
+  --tracking-wide:  0.08em;
 
-  --tracking-tight: -0.02em;
-  --tracking-normal: 0em;
+  --max-width:   1320px;
+  --nav-height:  68px;
 
-  /* ── Layout ──────────────────────────────────────────────── */
-  --max-width:      1280px;
-  --content-width:  768px;
-  --nav-height:     72px;
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   22px;
+  --radius-xl:   32px;
+  --radius-pill: 999px;
 
-  /* ── Border Radius ───────────────────────────────────────── */
-  --radius-sm:   6px;
-  --radius-md:   12px;
-  --radius-lg:   20px;
-  --radius-xl:   28px;
-  --radius-pill: 9999px;
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:    cubic-bezier(0, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* ── Transitions ─────────────────────────────────────────── */
-  --ease-smooth:   cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
-  --ease-spring:   cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:   150ms;
+  --dur-base:   250ms;
+  --dur-slow:   400ms;
+  --dur-slower: 600ms;
+  --dur-hero:   900ms;
 
-  --duration-fast:   150ms;
-  --duration-base:   250ms;
-  --duration-slow:   400ms;
-  --duration-slower: 600ms;
-
-  /* ── Z-index ─────────────────────────────────────────────── */
   --z-base:    1;
   --z-raised:  10;
   --z-nav:     100;
-  --z-modal:   200;
   --z-overlay: 150;
-  --z-toast:   300;
+  --z-modal:   200;
 }

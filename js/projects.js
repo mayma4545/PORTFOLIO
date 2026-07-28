@@ -89,7 +89,7 @@ export function renderProjects(filter = 'all') {
   grid.innerHTML = filtered.map((project) => createProjectCardHTML(project)).join('');
 
   // Attach click handlers for modals
-  grid.querySelectorAll('.project-card').forEach((card) => {
+  grid.querySelectorAll('.proj-card').forEach((card) => {
     card.addEventListener('click', () => {
       const id = card.dataset.projectId;
       const project = PROJECTS.find((p) => p.id === id);
@@ -116,29 +116,27 @@ export function renderProjects(filter = 'all') {
 function createProjectCardHTML(project) {
   const tagsHTML = project.tags
     .slice(0, 4)
-    .map((tag) => `<span class="tech-tag">${tag}</span>`)
+    .map((tag) => `<span class="tag">${tag}</span>`)
     .join('');
 
   return `
     <article
-      class="project-card reveal"
+      class="proj-card reveal"
       data-project-id="${project.id}"
       tabindex="0"
       role="button"
       aria-label="View ${project.title} project details"
     >
-      <div class="project-card__thumb">
-        <div class="project-card__thumb-placeholder" aria-hidden="true">
-          ${project.emoji}
-        </div>
-        <div class="project-card__overlay" aria-hidden="true">
-          <span class="btn btn--sm btn--primary">View Details</span>
+      <div class="proj-thumb">
+        <div style="font-size: 4rem;" aria-hidden="true">${project.emoji}</div>
+        <div class="proj-overlay" aria-hidden="true">
+          <span class="btn btn-sm btn-primary">View Details</span>
         </div>
       </div>
-      <div class="project-card__body">
-        <h3 class="project-card__title">${project.title}</h3>
-        <p class="project-card__desc">${project.description}</p>
-        <div class="project-card__tags">
+      <div class="proj-body">
+        <h3 class="proj-title">${project.title}</h3>
+        <p class="proj-desc">${project.description}</p>
+        <div class="proj-tags">
           ${tagsHTML}
         </div>
       </div>
@@ -160,7 +158,7 @@ export function getUniqueTags() {
  * Render filter buttons.
  */
 export function renderFilterButtons() {
-  const container = document.getElementById('projects-filter');
+  const container = document.getElementById('filter-bar');
   if (!container) return;
 
   // Curated filter list
@@ -170,7 +168,7 @@ export function renderFilterButtons() {
     .map(
       (f) => `
       <button
-        class="filter-btn ${f === 'All' ? 'is-active' : ''}"
+        class="filter-btn ${f === 'All' ? 'active' : ''}"
         data-filter="${f === 'All' ? 'all' : f}"
         aria-pressed="${f === 'All'}"
       >
@@ -183,10 +181,10 @@ export function renderFilterButtons() {
   container.querySelectorAll('.filter-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       container.querySelectorAll('.filter-btn').forEach((b) => {
-        b.classList.remove('is-active');
+        b.classList.remove('active');
         b.setAttribute('aria-pressed', 'false');
       });
-      btn.classList.add('is-active');
+      btn.classList.add('active');
       btn.setAttribute('aria-pressed', 'true');
       renderProjects(btn.dataset.filter);
     });
@@ -198,15 +196,15 @@ export function renderFilterButtons() {
  * @param {object} project
  */
 export function openProjectModal(project) {
-  const overlay = document.getElementById('project-modal-overlay');
-  const modal = document.getElementById('project-modal');
+  const overlay = document.getElementById('modal-backdrop');
+  const modal = document.getElementById('modal-box');
   if (!overlay || !modal) return;
 
   const tagsHTML = project.tags
-    .map((tag) => `<span class="tech-tag">${tag}</span>`)
+    .map((tag) => `<span class="tag">${tag}</span>`)
     .join('');
 
-  modal.querySelector('.modal__header').innerHTML = `
+  modal.querySelector('.modal-head').innerHTML = `
     <div>
       <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-2);">
         ${project.title}
@@ -215,7 +213,7 @@ export function openProjectModal(project) {
         ${project.description}
       </p>
     </div>
-    <button class="modal__close" id="modal-close-btn" aria-label="Close modal">
+    <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="18" y1="6" x2="6" y2="18"></line>
         <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -223,34 +221,34 @@ export function openProjectModal(project) {
     </button>
   `;
 
-  modal.querySelector('.modal__body').innerHTML = `
-    <div class="modal__project-thumb">
-      <div class="project-card__thumb-placeholder" style="height: 100%; font-size: 5rem;" aria-hidden="true">
+  modal.querySelector('.modal-body').innerHTML = `
+    <div class="modal-thumb">
+      <div style="height: 100%; display: flex; align-items: center; justify-content: center;" aria-hidden="true">
         ${project.emoji}
       </div>
     </div>
-    <p class="modal__project-desc">${project.longDescription}</p>
-    <div class="modal__project-tags">
+    <p style="font-size: var(--text-base); color: var(--text-secondary); line-height: 1.6; margin-top: var(--space-4);">${project.longDescription}</p>
+    <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6);">
       ${tagsHTML}
     </div>
-    <div class="modal__project-links">
-      <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+    <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-6);">
+      <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         Live Demo
       </a>
-      <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+      <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
         GitHub
       </a>
     </div>
   `;
 
-  overlay.classList.add('is-open');
+  overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 
   // Close handlers
   const closeModal = () => {
-    overlay.classList.remove('is-open');
+    overlay.classList.remove('open');
     document.body.style.overflow = '';
   };
 

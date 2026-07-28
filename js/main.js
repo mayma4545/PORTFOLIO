@@ -4,7 +4,7 @@
  * Jasper A. Fernandez Portfolio
  */
 
-import { initScrollReveal, initSkillBars, initTimelineReveal } from './animations.js';
+import { initScrollReveal, initSkillBars, initTimelineReveal, initNumberCounters } from './animations.js';
 import { renderProjects, renderFilterButtons } from './projects.js';
 import { initContactForm } from './contact.js';
 
@@ -23,7 +23,7 @@ function applyTheme(theme) {
   localStorage.setItem(THEME_KEY, theme);
 
   // Update toggle icon
-  const knob = document.querySelector('.theme-toggle__knob');
+  const knob = document.querySelector('.theme-knob');
   if (knob) {
     knob.textContent = theme === 'dark' ? '🌙' : '☀️';
   }
@@ -46,7 +46,7 @@ function initTheme() {
   const theme = getInitialTheme();
   applyTheme(theme);
 
-  const toggleBtn = document.getElementById('theme-toggle');
+  const toggleBtn = document.getElementById('theme-btn');
   toggleBtn?.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
     applyTheme(current === 'dark' ? 'light' : 'dark');
@@ -61,16 +61,16 @@ function initTheme() {
  * Add glass background to nav when user scrolls past threshold.
  */
 function initNavScroll() {
-  const nav = document.querySelector('.nav');
+  const nav = document.getElementById('main-nav');
   if (!nav) return;
 
   const SCROLL_THRESHOLD = 60;
 
   const handleScroll = () => {
     if (window.scrollY > SCROLL_THRESHOLD) {
-      nav.classList.add('is-scrolled');
+      nav.classList.add('scrolled');
     } else {
-      nav.classList.remove('is-scrolled');
+      nav.classList.remove('scrolled');
     }
   };
 
@@ -83,7 +83,7 @@ function initNavScroll() {
  */
 function initActiveNavLinks() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav__link[href^="#"]');
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
   if (!sections.length || !navLinks.length) return;
 
@@ -93,7 +93,7 @@ function initActiveNavLinks() {
         if (entry.isIntersecting) {
           const id = entry.target.id;
           navLinks.forEach((link) => {
-            link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
           });
         }
       });
@@ -110,22 +110,22 @@ function initActiveNavLinks() {
  * Initialize mobile hamburger menu.
  */
 function initMobileMenu() {
-  const hamburger = document.getElementById('hamburger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileLinks = document.querySelectorAll('.nav__mobile-link');
+  const hamburger = document.getElementById('ham-btn');
+  const mobileMenu = document.getElementById('mobile-nav');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
 
   if (!hamburger || !mobileMenu) return;
 
   const toggleMenu = () => {
-    const isOpen = hamburger.classList.toggle('is-open');
-    mobileMenu.classList.toggle('is-open', isOpen);
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
   };
 
   const closeMenu = () => {
-    hamburger.classList.remove('is-open');
-    mobileMenu.classList.remove('is-open');
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   };
@@ -164,7 +164,7 @@ function initSmoothScroll() {
  * Simple text cycling effect for the hero subtitle tag.
  */
 function initTypedEffect() {
-  const el = document.getElementById('typed-role');
+  const el = document.getElementById('typed-text');
   if (!el) return;
 
   const roles = [
@@ -238,6 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initSkillBars();
   initTimelineReveal();
+  initNumberCounters();
 
   // Contact
   initContactForm();

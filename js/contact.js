@@ -12,9 +12,9 @@
 export function initContactForm() {
   const form = document.getElementById('contact-form');
   const statusEl = document.getElementById('form-status');
-  const submitBtn = document.getElementById('form-submit-btn');
+  const submitBtn = document.getElementById('form-submit');
   const spinnerEl = document.getElementById('form-spinner');
-  const btnTextEl = document.getElementById('form-btn-text');
+  const btnTextEl = document.getElementById('form-btn-label');
 
   if (!form) return;
 
@@ -80,10 +80,10 @@ export function initContactForm() {
  */
 function validateForm(form) {
   const errors = [];
-  const name = form.querySelector('[name="name"]')?.value.trim();
-  const email = form.querySelector('[name="email"]')?.value.trim();
-  const subject = form.querySelector('[name="subject"]')?.value.trim();
-  const message = form.querySelector('[name="message"]')?.value.trim();
+  const name = form.querySelector('#f-name')?.value.trim();
+  const email = form.querySelector('#f-email')?.value.trim();
+  const subject = form.querySelector('#f-subject')?.value.trim();
+  const message = form.querySelector('#f-message')?.value.trim();
 
   if (!name || name.length < 2) errors.push('Name must be at least 2 characters.');
   if (!email || !isValidEmail(email)) errors.push('Please enter a valid email address.');
