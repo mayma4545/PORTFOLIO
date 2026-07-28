@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <title>Jasper A. Fernandez — Fullstack Developer</title>
+  <meta name="description" content="Jasper A. Fernandez is a Fullstack Developer who builds elegant, high-performance web solutions for startups and businesses. Explore my work, skills, and experience." />
+  <meta name="keywords" content="Fullstack Developer, Web Developer, UI/UX, React, Node.js, Portfolio, Jasper Fernandez" />
+  <meta name="author" content="Jasper A. Fernandez" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jasper A. Fernandez — Fullstack Developer" />
+  <meta property="og:description" content="Turning ideas into elegant, high-performance web solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jasperfernandez.dev" />
+  <meta property="og:image" content="assets/images/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jasper A. Fernandez — Fullstack Developer" />
+  <meta name="twitter:description" content="Turning ideas into elegant, high-performance web solutions." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheets (order matters) -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body class="page-fade-in">
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════════════════════ -->
+  <header role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <!-- Logo -->
+          <a href="#hero" class="nav__logo" aria-label="Jasper A. Fernandez — Home">
+            <span>JAF</span><span style="color: var(--text-muted);">.</span>
+          </a>
+
+          <!-- Desktop Links -->
+          <ul class="nav__links" role="list">
+            <li><a href="#about"      class="nav__link">About</a></li>
+            <li><a href="#projects"   class="nav__link">Projects</a></li>
+            <li><a href="#skills"     class="nav__link">Skills</a></li>
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#contact"    class="nav__link">Contact</a></li>
+          </ul>
+
+          <!-- Actions -->
+          <div class="nav__actions">
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle dark/light mode"
+              title="Toggle theme"
+            >
+              <span class="theme-toggle__knob" aria-hidden="true">🌙</span>
+            </button>
+
+            <!-- Hire Me CTA -->
+            <a href="#contact" class="btn btn--primary btn--sm" style="display: none;" id="nav-cta">
+              Hire Me
+            </a>
+
+            <!-- Hamburger -->
+            <button
+              id="hamburger-btn"
+              class="nav__hamburger"
+              aria-label="Toggle mobile menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="nav__mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <nav>
+        <ul role="list" style="list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+          <li><a href="#about"      class="nav__mobile-link">About</a></li>
+          <li><a href="#projects"   class="nav__mobile-link">Projects</a></li>
+          <li><a href="#skills"     class="nav__mobile-link">Skills</a></li>
+          <li><a href="#experience" class="nav__mobile-link">Experience</a></li>
+          <li><a href="#contact"    class="nav__mobile-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+       ══════════════════════════════════════════════════════ -->
+  <main>
+    <section id="hero" class="hero" aria-label="Introduction">
+      <!-- Background blobs -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob-decoration blob-decoration--1 hero__blob-1"></div>
+        <div class="blob-decoration blob-decoration--2 hero__blob-2"></div>
+        <div class="blob-decoration blob-decoration--1 hero__blob-3" style="background: var(--gradient-3);"></div>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__inner">
+          <!-- Text side -->
+          <div class="hero__text">
+            <div class="animate-hero-label">
+              <span class="availability-badge">Available for hire</span>
+            </div>
+
+            <h1 class="hero__title animate-hero-title">
+              Hi, I'm <span class="gradient-text">Jasper</span><br />
+              <span id="typed-role" style="font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl)); font-weight: var(--weight-bold); color: var(--text-secondary);">Fullstack Developer</span>
+            </h1>
+
+            <p class="hero__subtitle animate-hero-subtitle">
+              Turning ideas into elegant, high-performance web solutions. I build the products that drive your business forward.
+            </p>
+
+            <div class="hero__cta-group animate-hero-cta">
+              <a href="#projects" class="btn btn--primary" id="hero-cta-work">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                View My Work
+              </a>
+              <a href="#contact" class="btn btn--secondary" id="hero-cta-contact">
+                Let's Talk
+              </a>
+            </div>
+          </div>
+
+          <!-- Visual side -->
+          <div class="hero__visual animate-hero-title" aria-hidden="true">
+            <div class="hero__avatar-wrap">
+              <!-- Rotating ring -->
+              <div class="hero__avatar-ring"></div>
+
+              <!-- Profile image / initial fallback -->
+              <div class="hero__avatar-img">
+                <span>JF</span>
+              </div>
+
+              <!-- Floating stat cards -->
+              <div class="hero__stat-card hero__stat-card--1">
+                <div class="hero__stat-value">50+</div>
+                <div class="hero__stat-label">Projects Shipped</div>
+              </div>
+
+              <div class="hero__stat-card hero__stat-card--2">
+                <div class="hero__stat-value">4 yrs</div>
+                <div class="hero__stat-label">Experience</div>
+              </div>
+
+              <div class="hero__stat-card hero__stat-card--3">
+                <div class="hero__stat-value">100%</div>
+                <div class="hero__stat-label">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero__scroll-hint animate-hero-scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         ABOUT
+         ════════════════════════════════════════════════════ -->
+    <section id="about" class="section about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <div class="section-header" style="text-align: left;">
+              <span class="section-label">About Me</span>
+              <h2 id="about-heading" class="section-title reveal">
+                I craft digital solutions that <span class="gradient-text">matter</span>
+              </h2>
+            </div>
+            <p class="reveal" style="margin-bottom: var(--space-4);">
+              I'm Jasper, a Fullstack Developer based in the Philippines with 4+ years of experience building production-grade web applications for startups, agencies, and enterprise clients across the globe.
+            </p>
+            <p class="reveal">
+              My philosophy is simple: every line of code should serve the user. I combine technical precision with a strong eye for design to deliver products that are fast, accessible, and a pleasure to use. When I'm not coding, I'm mentoring junior developers or exploring the latest in web performance.
+            </p>
+            <div style="margin-top: var(--space-8);" class="reveal">
+              <a href="#contact" class="btn btn--primary" id="about-cta">
+                Start a Project
+              </a>
+            </div>
+          </div>
+
+          <div class="about__stats stagger-children" aria-label="Key statistics">
+            <div class="about__stat glass-card reveal">
+              <span class="about__stat-number">50+</span>
+              <span class="about__stat-label">Projects Completed</span>
+            </div>
+            <div class="about__stat glass-card reveal">
+              <span class="about__stat-number">30+</span>
+              <span class="about__stat-label">Happy Clients</span>
+            </div>
+            <div class="about__stat glass-card reveal">
+              <span class="about__stat-number">4+</span>
+              <span class="about__stat-label">Years Experience</span>
+            </div>
+            <div class="about__stat glass-card reveal">
+              <span class="about__stat-number">99%</span>
+              <span class="about__stat-label">On-time Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         PROJECTS
+         ════════════════════════════════════════════════════ -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Featured Work</span>
+          <h2 id="projects-heading" class="section-title reveal">Projects that <span class="gradient-text-2">make impact</span></h2>
+          <p class="section-subtitle reveal">A curated selection of work ranging from SaaS platforms and open-source tools to client-facing applications.</p>
+        </div>
+
+        <!-- Filter -->
+        <div id="projects-filter" class="projects__filter" role="group" aria-label="Filter projects by technology"></div>
+
+        <!-- Grid (populated by JS) -->
+        <div id="projects-grid" class="projects__grid" role="list" aria-label="Projects"></div>
+      </div>
+
+      <!-- Project Modal -->
+      <div id="project-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+        <div id="project-modal" class="modal">
+          <div class="modal__header"></div>
+          <div class="modal__body"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         SKILLS
+         ════════════════════════════════════════════════════ -->
+    <section id="skills" class="section skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Expertise</span>
+          <h2 id="skills-heading" class="section-title reveal">Tools of my <span class="gradient-text">trade</span></h2>
+          <p class="section-subtitle reveal">A battle-tested toolkit built through years of shipping real-world products.</p>
+        </div>
+
+        <div class="skills__grid stagger-children">
+          <!-- Frontend -->
+          <div class="glass-card reveal">
+            <h3 class="skills__category-title">Frontend</h3>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">React / Next.js</span>
+                <span class="skill-item__percent">92%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="92%" aria-label="React proficiency 92%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">TypeScript</span>
+                <span class="skill-item__percent">88%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="88%" aria-label="TypeScript proficiency 88%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">CSS / Animations</span>
+                <span class="skill-item__percent">95%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="95%" aria-label="CSS proficiency 95%" style="background: var(--gradient-2);"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Vue / Svelte</span>
+                <span class="skill-item__percent">75%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="75%" aria-label="Vue/Svelte proficiency 75%" style="background: var(--gradient-3);"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="glass-card reveal">
+            <h3 class="skills__category-title">Backend</h3>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Node.js / Express</span>
+                <span class="skill-item__percent">90%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="90%" aria-label="Node.js proficiency 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">PostgreSQL / MySQL</span>
+                <span class="skill-item__percent">85%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="85%" aria-label="PostgreSQL proficiency 85%" style="background: var(--gradient-2);"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Python / FastAPI</span>
+                <span class="skill-item__percent">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78%" aria-label="Python proficiency 78%" style="background: var(--gradient-3);"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Go</span>
+                <span class="skill-item__percent">65%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="65%" aria-label="Go proficiency 65%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="glass-card reveal">
+            <h3 class="skills__category-title">Tools & Ops</h3>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Docker / CI/CD</span>
+                <span class="skill-item__percent">82%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82%" aria-label="Docker proficiency 82%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">AWS / Vercel</span>
+                <span class="skill-item__percent">80%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="80%" aria-label="AWS proficiency 80%" style="background: var(--gradient-2);"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Git / GitHub</span>
+                <span class="skill-item__percent">96%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="96%" aria-label="Git proficiency 96%" style="background: var(--gradient-3);"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-item__header">
+                <span class="skill-item__name">Figma / Design</span>
+                <span class="skill-item__percent">72%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="72%" aria-label="Figma proficiency 72%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech icons row -->
+        <div class="skills__icons-grid reveal" aria-label="Technologies I work with">
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">⚛️</div>React</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🟨</div>JavaScript</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🔷</div>TypeScript</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🟩</div>Node.js</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🐘</div>PostgreSQL</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🐳</div>Docker</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">☁️</div>AWS</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🐍</div>Python</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🟦</div>Go</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🎨</div>Figma</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">▲</div>Vercel</div>
+          <div class="skill-icon-card"><div class="skill-icon-card__icon">🐙</div>GitHub</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         EXPERIENCE
+         ════════════════════════════════════════════════════ -->
+    <section id="experience" class="section" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Career</span>
+          <h2 id="experience-heading" class="section-title reveal">My <span class="gradient-text-3">journey</span></h2>
+          <p class="section-subtitle reveal">A timeline of roles and milestones that shaped my expertise.</p>
+        </div>
+
+        <div class="timeline" role="list">
+          <!-- Item 1 -->
+          <div class="timeline__item glass-card" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Jan 2024 — Present</span>
+              <h3 class="timeline__role">Senior Fullstack Developer</h3>
+              <p class="timeline__company">NovaTech Solutions · Full-time · Remote</p>
+              <p class="timeline__desc">
+                Leading a team of 5 to architect and deliver a multi-tenant SaaS platform serving 10,000+ users. Introduced CI/CD pipelines that cut deployment time by 70%. Mentoring 3 junior developers through structured code reviews.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline__item glass-card" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Mar 2022 — Dec 2023</span>
+              <h3 class="timeline__role">Fullstack Developer</h3>
+              <p class="timeline__company">Pixel & Code Agency · Full-time · Hybrid</p>
+              <p class="timeline__desc">
+                Built and maintained client-facing web applications for brands in e-commerce, fintech, and media. Delivered 18 projects across the 21-month tenure with a 97% on-time rate. Championed the adoption of TypeScript across the team.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline__item glass-card" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Jun 2021 — Feb 2022</span>
+              <h3 class="timeline__role">Frontend Developer</h3>
+              <p class="timeline__company">StartupHub PH · Contract · Remote</p>
+              <p class="timeline__desc">
+                Developed the MVP frontend for 4 early-stage startups within the StartupHub accelerator. One of the products reached Series A funding within 8 months of launch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline__item glass-card" role="listitem">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <span class="timeline__date">Jan 2020 — May 2021</span>
+              <h3 class="timeline__role">Junior Web Developer</h3>
+              <p class="timeline__company">Freelance · Self-employed</p>
+              <p class="timeline__desc">
+                Began my career building websites and web apps for local businesses, NGOs, and international clients via Upwork. Completed 25+ projects with a 5-star average rating.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════
+         CONTACT
+         ════════════════════════════════════════════════════ -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Get In Touch</span>
+          <h2 id="contact-heading" class="section-title reveal">Let's build something <span class="gradient-text">great</span></h2>
+          <p class="section-subtitle reveal">Whether you have a project in mind or just want to chat — my inbox is always open.</p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Info -->
+          <div>
+            <div class="glass-card reveal" style="margin-bottom: var(--space-6);">
+              <h3 class="contact__info-title">Ready to start?</h3>
+              <p class="contact__info-text">
+                I'm currently available for freelance projects, contract roles, and full-time opportunities. Let's discuss how I can help you achieve your goals.
+              </p>
+
+              <div class="contact__socials">
+                <a
+                  href="https://github.com/jasperfernandez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="GitHub profile"
+                  id="social-github"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  GitHub
+                </a>
+                <a
+                  href="https://linkedin.com/in/jasperfernandez"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="LinkedIn profile"
+                  id="social-linkedin"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  LinkedIn
+                </a>
+                <a
+                  href="mailto:jasper@fernandez.dev"
+                  class="social-link"
+                  aria-label="Send email"
+                  id="social-email"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  Email Me
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="glass-card reveal">
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="form-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="form-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="John Smith"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="form-email">Email Address</label>
+                  <input
+                    type="email"
+                    id="form-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="john@company.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-subject">Subject</label>
+                <input
+                  type="text"
+                  id="form-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Project inquiry / Collaboration / Consultation"
+                  required
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message">Message</label>
+                <textarea
+                  id="form-message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Tell me about your project, timeline, and budget. The more detail, the better!"
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <!-- Status message -->
+              <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
+
+              <button type="submit" id="form-submit-btn" class="btn btn--primary" style="align-self: flex-start; min-width: 160px;">
+                <div id="form-spinner" class="spinner" style="display: none; width: 16px; height: 16px;" aria-hidden="true"></div>
+                <span id="form-btn-text">Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <hr class="gradient-divider" />
+    <div class="container" style="padding-top: var(--space-10);">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">JAF<span>.</span></div>
+          <p class="footer__copy" style="margin-top: var(--space-2);">
+            © 2026 Jasper A. Fernandez. Crafted with ☕ &amp; passion.
+          </p>
+        </div>
+
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#about"      class="footer__link">About</a>
+          <a href="#projects"   class="footer__link">Projects</a>
+          <a href="#skills"     class="footer__link">Skills</a>
+          <a href="#contact"    class="footer__link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (type=module for ES6 imports) -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
