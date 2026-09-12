@@ -1,10 +1,10 @@
 # Implementation Plan: Portfolio Redesign - "Organic Editorial"
 
 ## Phase 1: Design System & Structural Overhaul
-- [ ] Task: Update Global CSS Variables (Theming)
-    - [ ] Replace heavy gradient variables with an "Earthy & Organic" palette (warm, natural tones).
-    - [ ] Update typography variables to new editorial fonts (e.g., elegant serif for headings).
-    - [ ] Define border-radius utilities for fluid, organic shapes.
+- [x] Task: Update Global CSS Variables (Theming) fe6ab1d
+    - [x] Replace heavy gradient variables with an "Earthy & Organic" palette (warm, natural tones).
+    - [x] Update typography variables to new editorial fonts (e.g., elegant serif for headings).
+    - [x] Define border-radius utilities for fluid, organic shapes.
 - [ ] Task: Base CSS and Typography Overhaul
     - [ ] Apply new font families to global elements.
     - [ ] Adjust global spacing to support the editorial, airy feel.
