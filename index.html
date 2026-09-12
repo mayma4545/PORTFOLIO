@@ -53,8 +53,10 @@
         </a>
 
         <ul class="nav-links" role="list" aria-label="Navigation links">
-          <li><a href="#about"      class="nav-link">About</a></li>
+          <li><a href="#philosophy" class="nav-link">Manifesto</a></li>
           <li><a href="#projects"   class="nav-link">Projects</a></li>
+          <li><a href="#beyond"     class="nav-link">Beyond Code</a></li>
+          <li><a href="#about"      class="nav-link">About</a></li>
           <li><a href="#skills"     class="nav-link">Skills</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#contact"    class="nav-link">Contact</a></li>
@@ -64,7 +66,7 @@
           <button id="theme-btn" class="theme-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
             <span class="theme-knob" aria-hidden="true">🌙</span>
           </button>
-          <a href="#contact" class="btn btn-primary btn-sm" id="nav-hire" style="display:none;">Hire Me</a>
+          <a href="#contact" class="btn btn-primary btn-sm" id="nav-hire">Let's Talk</a>
           <button id="ham-btn" class="ham-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
             <span></span><span></span><span></span>
           </button>
@@ -78,8 +80,10 @@
   <div id="mobile-nav" class="mobile-menu" role="dialog" aria-label="Mobile navigation menu">
     <nav>
       <ul role="list" style="list-style:none;display:flex;flex-direction:column;align-items:center;gap:1.25rem;">
-        <li><a href="#about"      class="mobile-link">About</a></li>
+        <li><a href="#philosophy" class="mobile-link">Manifesto</a></li>
         <li><a href="#projects"   class="mobile-link">Projects</a></li>
+        <li><a href="#beyond"     class="mobile-link">Beyond Code</a></li>
+        <li><a href="#about"      class="mobile-link">About</a></li>
         <li><a href="#skills"     class="mobile-link">Skills</a></li>
         <li><a href="#experience" class="mobile-link">Experience</a></li>
         <li><a href="#contact"    class="mobile-link">Contact</a></li>
@@ -91,7 +95,7 @@
 <main>
 
 <!-- ══════════════════════════════════════════════════════════
-     HERO
+     HERO: EDITORIAL MASTHEAD & ASYMMETRICAL PORTRAIT
      ══════════════════════════════════════════════════════════ -->
 <section id="hero" class="hero" aria-label="Introduction">
 
@@ -104,86 +108,93 @@
   </div>
 
   <div class="container hero-content">
-    <div class="hero-inner">
 
-      <!-- Text -->
-      <div class="hero-text">
+    <!-- Editorial Masthead Meta Bar -->
+    <div class="editorial-masthead reveal">
+      <div class="masthead-col">
+        <span class="masthead-label">DISPATCH // VOL. 04</span>
+        <span class="masthead-val">EDITION 2026</span>
+      </div>
+      <div class="masthead-col center-col">
+        <span class="masthead-badge">
+          <span class="masthead-dot"></span>
+          OPEN FOR HIGH-IMPACT COLLABORATIONS
+        </span>
+      </div>
+      <div class="masthead-col right-col">
+        <span class="masthead-label">BASE</span>
+        <span class="masthead-val">MANILA, PH [UTC+8]</span>
+      </div>
+    </div>
 
-        <div class="hero-anim-1">
-          <span class="avail-badge">
-            <span class="avail-dot" aria-hidden="true"></span>
-            Available for freelance &amp; full-time
-          </span>
+    <!-- Main Asymmetrical Editorial Layout -->
+    <div class="hero-editorial-layout">
+
+      <!-- Text & Editorial Lead -->
+      <div class="hero-editorial-lead">
+
+        <div class="hero-curated-tag reveal">
+          <span class="editorial-num">No. 01</span>
+          <span>FULLSTACK ENGINEER &amp; DIGITAL CRAFTSMAN</span>
         </div>
 
-        <div class="hero-anim-2">
-          <div class="hero-eyebrow">
-            <span class="hero-eyebrow-line"></span>
-            Fullstack Developer
-          </div>
-          <h1 class="hero-name">
-            Hi, I'm <span class="g-text-hero">Jasper</span><br />Fernandez.
-          </h1>
-        </div>
+        <h1 class="hero-headline reveal">
+          Jasper A.<br />
+          <span class="headline-italic">Fernandez</span>
+        </h1>
 
-        <div class="hero-role-line hero-anim-3" aria-live="polite">
-          <span style="color:var(--text-muted);">//</span>
-          <span id="typed-text">Fullstack Developer</span><span class="cursor" aria-hidden="true"></span>
-        </div>
-
-        <p class="hero-tagline hero-anim-4">
-          Turning ideas into elegant, high-performance web solutions.<br />
-          I build the products that grow your business.
+        <p class="hero-editorial-sub reveal">
+          Engineering digital platforms with <span class="accent-word">tactile soul</span>, deep architectural clarity, and respect for human feel.
         </p>
 
-        <div class="hero-cta hero-anim-4">
+        <!-- Conversational Micro-Note -->
+        <div class="editorial-note-card reveal">
+          <div class="note-quote-mark">“</div>
+          <p class="note-text">
+            I reject cookie-cutter AI boilerplate. Every interface I build is tailored, responsive, and crafted to evoke genuine trust and delight for both end-users and the engineers who maintain the code.
+          </p>
+          <div class="note-author">— Jasper Fernandez, Fullstack Architecture</div>
+        </div>
+
+        <div class="hero-actions-row reveal">
           <a href="#projects" class="btn btn-primary" id="hero-view-work">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            View My Work
+            <span>Explore Curated Archive</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
-          <a href="#contact" class="btn btn-secondary" id="hero-contact">
-            Let's Talk
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <a href="#philosophy" class="btn btn-secondary">
+            Read My Manifesto
           </a>
         </div>
 
       </div>
 
-      <!-- Visual -->
-      <div class="hero-visual hero-anim-visual" aria-hidden="true">
-        <div class="avatar-frame">
-          <!-- Conic spinning ring -->
-          <div class="avatar-ring">
-            <div class="avatar-ring-inner"></div>
-          </div>
-
-          <!-- Face -->
-          <div class="avatar-face">
-            <span class="avatar-initials">JF</span>
-          </div>
-
-          <!-- Floating chips -->
-          <div class="hero-chip chip-1 float">
-            <span class="hero-chip-icon">🚀</span>
-            <div>
-              <div class="hero-chip-val">50+</div>
-              <div class="hero-chip-text" style="font-size:10px;">Projects Shipped</div>
+      <!-- Organic Portrait & Asymmetric Frame -->
+      <div class="hero-editorial-aside reveal">
+        <div class="portrait-organic-wrapper">
+          <div class="portrait-backdrop-shape" aria-hidden="true"></div>
+          
+          <div class="portrait-organic-frame">
+            <img src="portrait.jpg" alt="Jasper A. Fernandez" class="portrait-img" loading="eager" />
+            <div class="portrait-caption">
+              <span class="caption-dot" aria-hidden="true"></span>
+              <span class="caption-text">Jasper in focus · Manila, PH</span>
             </div>
           </div>
 
-          <div class="hero-chip chip-2 float" style="animation-delay:-1.5s;">
-            <span class="hero-chip-icon">⭐</span>
-            <div>
-              <div class="hero-chip-val">4+ yrs</div>
-              <div class="hero-chip-text" style="font-size:10px;">Experience</div>
+          <!-- Asymmetric floating tactile badges -->
+          <div class="organic-stamp-badge stamp-float-1" aria-hidden="true">
+            <span class="stamp-icon">✦</span>
+            <div class="stamp-content">
+              <strong>4+ Years</strong>
+              <span>Production Systems</span>
             </div>
           </div>
 
-          <div class="hero-chip chip-3 float" style="animation-delay:-3s;">
-            <span class="hero-chip-icon">✅</span>
-            <div>
-              <div class="hero-chip-val">100%</div>
-              <div class="hero-chip-text" style="font-size:10px;">Satisfaction</div>
+          <div class="organic-stamp-badge stamp-float-2" aria-hidden="true">
+            <span class="stamp-icon">⚡</span>
+            <div class="stamp-content">
+              <strong>Fast &amp; Scalable</strong>
+              <span>Sub-200ms Web Core</span>
             </div>
           </div>
 
@@ -191,14 +202,81 @@
       </div>
 
     </div>
+
   </div>
 
   <!-- Scroll hint -->
   <div class="scroll-hint hero-anim-5" aria-hidden="true">
     <div class="scroll-line"></div>
-    <span>scroll</span>
+    <span>scroll to inspect</span>
   </div>
 
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION: MY PHILOSOPHY (MANIFESTO)
+     ══════════════════════════════════════════════════════════ -->
+<section id="philosophy" class="section philosophy-section" aria-labelledby="phil-title">
+  <div class="container">
+
+    <div class="section-header header-editorial">
+      <div>
+        <div class="label-tag reveal">Manifesto // 01</div>
+        <h2 id="phil-title" class="section-title reveal">
+          How I Think About <br /><span class="serif-italic g-text">Craft &amp; Code</span>
+        </h2>
+      </div>
+      <p class="section-subtitle reveal">
+        Technology is easy to assemble blindly; it takes deliberate care, taste, and empathy to create software people love interacting with.
+      </p>
+    </div>
+
+    <!-- Big Manifesto Pull-Quote -->
+    <div class="manifesto-lead-quote reveal">
+      <div class="quote-symbol" aria-hidden="true">“</div>
+      <blockquote class="lead-quote-text">
+        Great software feels like a tuned physical instrument: immediate, responsive, and stripped of artificial bloat.
+      </blockquote>
+      <div class="lead-quote-attribution">Personal Stance on Modern Web Engineering</div>
+    </div>
+
+    <!-- 3 Asymmetrical Philosophy Pillars -->
+    <div class="philosophy-grid">
+
+      <!-- Pillar 1 -->
+      <div class="phil-card phil-card-1 reveal">
+        <div class="phil-num">01 /</div>
+        <h3 class="phil-card-title">Form Follows Feeling</h3>
+        <p class="phil-card-desc">
+          Bespoke typography, purposeful rhythm, and organic micro-interactions aren't vanity—they communicate respect for the user's attention. I build interfaces that feel human, not procedurally generated.
+        </p>
+        <div class="phil-footer-tag">Design Sensitivity</div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="phil-card phil-card-2 reveal">
+        <div class="phil-num">02 /</div>
+        <h3 class="phil-card-title">Ruthless Clarity Over Cleverness</h3>
+        <p class="phil-card-desc">
+          I write code for the next engineer who will maintain it at 2 AM. Modular schemas, deterministic state, and type safety trump cryptic one-liners and convoluted abstractions every single time.
+        </p>
+        <div class="phil-footer-tag">Engineering Ethos</div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="phil-card phil-card-3 reveal">
+        <div class="phil-num">03 /</div>
+        <h3 class="phil-card-title">Fullstack Accountability</h3>
+        <p class="phil-card-desc">
+          From the database query plan down to the CSS repaint cycle, understanding the entire vertical slice lets me ship features that are blindingly fast, accessible, and resilient under real-world load.
+        </p>
+        <div class="phil-footer-tag">Holistic Execution</div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 
@@ -210,41 +288,55 @@
     <div class="about-grid">
 
       <!-- Text -->
-      <div>
-        <div class="section-header" style="text-align:left;margin-bottom:var(--space-8);">
-          <div class="label-tag reveal">About Me</div>
+      <div class="about-editorial-lead">
+        <div class="section-header" style="text-align:left;margin-bottom:var(--space-6);">
+          <div class="label-tag reveal">Architect Profile // 03</div>
           <h2 id="about-h" class="section-title reveal">
-            I craft digital solutions<br />that <span class="g-text">make impact</span>
+            Bridging engineering rigor <br />with <span class="serif-italic g-text">design intuition</span>
           </h2>
         </div>
+        <p class="reveal" style="font-size:var(--text-lg);line-height:1.6;color:var(--text-primary);margin-bottom:var(--space-4);">
+          I'm Jasper, a Fullstack Developer based in Manila, Philippines. For over 4 years, I've designed and shipped production systems for agile startups, agencies, and enterprise clients worldwide.
+        </p>
         <p class="reveal">
-          I'm Jasper, a Fullstack Developer based in the Philippines with 4+ years of experience building production-grade web applications for startups, agencies, and enterprise clients worldwide.
+          My work lives at the intersection of robust system design and tactile frontend feel. I don't treat design as an afterthought or backend as a black box—I build cohesive, reliable products where every layer reinforces quality.
         </p>
-        <p class="reveal" style="margin-top:var(--space-4);">
-          My philosophy: every line of code should serve the user. I combine technical precision with a strong design sensibility to deliver products that are fast, accessible, and a genuine pleasure to use.
-        </p>
+        <div class="about-quotes-block reveal" style="margin-top:var(--space-6);">
+          <div class="about-quote-item">
+            <span class="editorial-num">✦</span>
+            <span>Focus: Real-time architectures, ergonomic component systems, and high-performance web applications.</span>
+          </div>
+          <div class="about-quote-item">
+            <span class="editorial-num">✦</span>
+            <span>Collaboration: Direct, transparent, and asynchronous-friendly for remote teams worldwide.</span>
+          </div>
+        </div>
         <div style="margin-top:var(--space-8);" class="reveal">
-          <a href="#contact" class="btn btn-primary" id="about-hire">Start a Project</a>
+          <a href="#contact" class="btn btn-primary" id="about-hire">Initiate Collaboration</a>
         </div>
       </div>
 
-      <!-- Stats -->
-      <div class="about-stats stagger">
-        <div class="about-stat card reveal">
-          <span class="stat-number" data-count="50">50+</span>
-          <span class="stat-label">Projects Completed</span>
+      <!-- Editorial Metrics Showcase -->
+      <div class="about-metrics-editorial stagger">
+        <div class="metric-card reveal">
+          <span class="metric-num">4+</span>
+          <span class="metric-title">Years Engineering</span>
+          <p class="metric-desc">Shipping production web systems with enduring architectural clarity.</p>
         </div>
-        <div class="about-stat card reveal">
-          <span class="stat-number" data-count="30">30+</span>
-          <span class="stat-label">Happy Clients</span>
+        <div class="metric-card reveal">
+          <span class="metric-num">&lt;200ms</span>
+          <span class="metric-title">Target Latency</span>
+          <p class="metric-desc">Relentless optimization for snappy interactions and fast render cycles.</p>
         </div>
-        <div class="about-stat card reveal">
-          <span class="stat-number" data-count="4">4+</span>
-          <span class="stat-label">Years Experience</span>
+        <div class="metric-card reveal">
+          <span class="metric-num">100%</span>
+          <span class="metric-title">Bespoke Code</span>
+          <p class="metric-desc">Handcrafted design systems built specifically for each brand identity.</p>
         </div>
-        <div class="about-stat card reveal">
-          <span class="stat-number" data-count="99">99%</span>
-          <span class="stat-label">On-time Delivery</span>
+        <div class="metric-card reveal">
+          <span class="metric-num">Global</span>
+          <span class="metric-title">Remote Fluency</span>
+          <p class="metric-desc">Collaborating across US, European, and Asia-Pacific time zones.</p>
         </div>
       </div>
 
@@ -281,6 +373,103 @@
       <div id="modal-head" class="modal-head"></div>
       <div id="modal-body" class="modal-body"></div>
     </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION: BEYOND CODE (PERSONALITY & HUMAN TOUCH)
+     ══════════════════════════════════════════════════════════ -->
+<section id="beyond" class="section beyond-section" aria-labelledby="beyond-title">
+  <div class="container">
+
+    <div class="section-header header-editorial">
+      <div>
+        <div class="label-tag reveal">Human Dimension // 02</div>
+        <h2 id="beyond-title" class="section-title reveal">
+          Beyond the <span class="serif-italic g-text">Terminal</span>
+        </h2>
+      </div>
+      <p class="section-subtitle reveal">
+        Great engineering doesn't happen in a sterile vacuum. Here is what fuels my thinking, creativity, and perspective outside of git commits.
+      </p>
+    </div>
+
+    <!-- Asymmetrical Personality Mosaic -->
+    <div class="beyond-mosaic">
+
+      <!-- Card 1: Coffee & Morning Rituals -->
+      <div class="beyond-card beyond-card-coffee reveal">
+        <div class="beyond-card-header">
+          <span class="beyond-badge">DAILY RITUAL</span>
+          <span class="beyond-icon" aria-hidden="true">☕</span>
+        </div>
+        <h3 class="beyond-card-title">Crafting Coffee &amp; Systems</h3>
+        <p class="beyond-card-desc">
+          I treat morning coffee brewing like software optimization: calibrated water ratios, single-origin beans, and precise extraction timing. It sets the calm rhythm for focused, intentional deep work.
+        </p>
+        <div class="beyond-pill-list">
+          <span class="beyond-pill">V60 Pour-Over</span>
+          <span class="beyond-pill">Ethiopian Yirgacheffe</span>
+          <span class="beyond-pill">Aeropress</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Aesthetic Setup & Tools -->
+      <div class="beyond-card beyond-card-setup reveal">
+        <div class="beyond-card-header">
+          <span class="beyond-badge">WORK ENVIRONMENT</span>
+          <span class="beyond-icon" aria-hidden="true">⌨️</span>
+        </div>
+        <h3 class="beyond-card-title">Tactile Workspace</h3>
+        <p class="beyond-card-desc">
+          Ergonomic custom mechanical keyboards, warm wood surfaces, natural diffused daylight, and a minimal Neovim config. A clean, intentional space breeds clean, resilient architecture.
+        </p>
+        <div class="beyond-pill-list">
+          <span class="beyond-pill">Custom 65% Mechanical</span>
+          <span class="beyond-pill">Neovim &amp; Ghostty</span>
+          <span class="beyond-pill">Warm Walnut &amp; Clay</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Deep Work Soundtracks -->
+      <div class="beyond-card beyond-card-audio reveal">
+        <div class="beyond-card-header">
+          <span class="beyond-badge">AUDIO FUEL</span>
+          <span class="beyond-icon" aria-hidden="true">🎧</span>
+        </div>
+        <h3 class="beyond-card-title">Sonic Architecture</h3>
+        <p class="beyond-card-desc">
+          Lo-fi ambient soundscapes, Japanese city pop, and post-rock instrumental tracks. Sound design is essential to keeping flow state uninterrupted during complex refactors.
+        </p>
+        <div class="beyond-pill-list">
+          <span class="beyond-pill">Nils Frahm</span>
+          <span class="beyond-pill">Tycho</span>
+          <span class="beyond-pill">Post-Rock &amp; Ambient</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Interactive Easter Egg / Spark Machine -->
+      <div class="beyond-card beyond-card-egg reveal" id="interactive-spark-box">
+        <div class="beyond-card-header">
+          <span class="beyond-badge egg-badge">INTERACTIVE EASTER EGG</span>
+          <span class="beyond-icon" id="spark-icon" aria-hidden="true">✨</span>
+        </div>
+        <h3 class="beyond-card-title">Jasper's Creative Spark</h3>
+        <p class="beyond-card-desc" id="spark-text">
+          "Simplicity is prerequisite for reliability." — Draw a randomized piece of engineering wisdom, design rule, or quirky observation from my notebook.
+        </p>
+        <div class="spark-action-row">
+          <button id="spark-btn" class="btn btn-sm btn-primary" aria-label="Draw creative spark">
+            <span>Draw Spark</span>
+            <span aria-hidden="true">🎲</span>
+          </button>
+          <span class="spark-counter" id="spark-counter">Spark #01</span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 

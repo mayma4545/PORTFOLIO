@@ -243,6 +243,54 @@ document.addEventListener('DOMContentLoaded', () => {
   // Contact
   initContactForm();
 
+  // Easter Egg
+  initEasterEgg();
+
   // Expose for re-init after dynamic renders
   window.initScrollReveal = initScrollReveal;
 });
+
+/* ──────────────────────────────────────────────────────────
+   INTERACTIVE EASTER EGG: CREATIVE SPARK MACHINE
+   ────────────────────────────────────────────────────────── */
+const SPARKS = [
+  { text: '"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra', icon: '⚡' },
+  { text: '"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." — Martin Fowler', icon: '🧠' },
+  { text: '"A 90g pour of Ethiopian single-origin coffee brewed at 92°C solves 80% of distributed concurrency bugs." — Jasper\'s Law', icon: '☕' },
+  { text: '"Premature optimization is the root of all evil, but premature complexity is the graveyard of momentum."', icon: '🌱' },
+  { text: '"If you can\'t sketch your database schema on a single napkin, your users will inevitably feel the confusion in the UI."', icon: '📐' },
+  { text: '"Bespoke software has texture. Clean typography, intentional kerning, and snappy transitions are acts of hospitality."', icon: '✨' },
+  { text: '"Recruiter secret: Jasper loves talking about high-throughput pipelines, offline-first sync, and mechanical keyboards over coffee."', icon: '🤝' },
+  { text: '"Secret unlocked: Open DevTools console to see the secret engineer transmission!"', icon: '🎉' },
+];
+
+function initEasterEgg() {
+  const sparkBtn = document.getElementById('spark-btn');
+  const sparkText = document.getElementById('spark-text');
+  const sparkIcon = document.getElementById('spark-icon');
+  const sparkCounter = document.getElementById('spark-counter');
+  let currentIdx = 0;
+
+  if (sparkBtn && sparkText) {
+    sparkBtn.addEventListener('click', () => {
+      currentIdx = (currentIdx + 1) % SPARKS.length;
+      const spark = SPARKS[currentIdx];
+
+      sparkText.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+      sparkText.style.opacity = '0';
+      sparkText.style.transform = 'translateY(6px)';
+
+      setTimeout(() => {
+        sparkText.textContent = spark.text;
+        if (sparkIcon) sparkIcon.textContent = spark.icon;
+        if (sparkCounter) sparkCounter.textContent = `Spark #${String(currentIdx + 1).padStart(2, '0')}`;
+        sparkText.style.opacity = '1';
+        sparkText.style.transform = 'translateY(0)';
+      }, 200);
+    });
+  }
+
+  // Developer console transmission
+  console.log('%c🚀 Jasper Fernandez — Fullstack Craftsman', 'font-size:18px;font-weight:bold;color:#d97757;');
+  console.log('%c"Thanks for inspecting the console! Looking to build something extraordinary? Let\'s talk."', 'font-size:13px;color:#8ea87d;');
+}

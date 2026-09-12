@@ -86,7 +86,7 @@ export function renderProjects(filter = 'all') {
     ? PROJECTS
     : PROJECTS.filter((p) => p.tags.some((t) => t.toLowerCase() === filter.toLowerCase()));
 
-  grid.innerHTML = filtered.map((project) => createProjectCardHTML(project)).join('');
+  grid.innerHTML = filtered.map((project, idx) => createProjectCardHTML(project, idx)).join('');
 
   // Attach click handlers for modals
   grid.querySelectorAll('.proj-card').forEach((card) => {
@@ -111,9 +111,11 @@ export function renderProjects(filter = 'all') {
 /**
  * Create HTML string for a project card.
  * @param {object} project
+ * @param {number} index
  * @returns {string}
  */
-function createProjectCardHTML(project) {
+function createProjectCardHTML(project, index = 0) {
+  const indexNum = String(index + 1).padStart(2, '0');
   const tagsHTML = project.tags
     .slice(0, 4)
     .map((tag) => `<span class="tag">${tag}</span>`)
@@ -121,20 +123,30 @@ function createProjectCardHTML(project) {
 
   return `
     <article
-      class="proj-card reveal"
+      class="proj-card proj-card-${index + 1} reveal"
       data-project-id="${project.id}"
       tabindex="0"
       role="button"
       aria-label="View ${project.title} project details"
     >
+      <div class="proj-card-topbar">
+        <span class="proj-exhibit-no">EXHIBIT // NO. ${indexNum}</span>
+        <span class="proj-status-chip">${project.featured ? 'FEATURED' : 'ARCHIVE'}</span>
+      </div>
+
       <div class="proj-thumb">
-        <div style="font-size: 4rem;" aria-hidden="true">${project.emoji}</div>
+        <div class="proj-emoji-badge" aria-hidden="true">${project.emoji}</div>
+        <div class="proj-thumb-decor" aria-hidden="true"></div>
         <div class="proj-overlay" aria-hidden="true">
-          <span class="btn btn-sm btn-primary">View Details</span>
+          <span class="btn btn-sm btn-primary">Inspect Case Study</span>
         </div>
       </div>
+
       <div class="proj-body">
-        <h3 class="proj-title">${project.title}</h3>
+        <div class="proj-title-row">
+          <h3 class="proj-title">${project.title}</h3>
+          <span class="proj-arrow" aria-hidden="true">↗</span>
+        </div>
         <p class="proj-desc">${project.description}</p>
         <div class="proj-tags">
           ${tagsHTML}
