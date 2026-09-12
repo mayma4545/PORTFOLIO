@@ -5,10 +5,10 @@
     - [x] Replace heavy gradient variables with an "Earthy & Organic" palette (warm, natural tones).
     - [x] Update typography variables to new editorial fonts (e.g., elegant serif for headings).
     - [x] Define border-radius utilities for fluid, organic shapes.
-- [ ] Task: Base CSS and Typography Overhaul
-    - [ ] Apply new font families to global elements.
-    - [ ] Adjust global spacing to support the editorial, airy feel.
-    - [ ] Update base HTML background and text colors to the new theme.
+- [x] Task: Base CSS and Typography Overhaul 10c927e
+    - [x] Apply new font families to global elements.
+    - [x] Adjust global spacing to support the editorial, airy feel.
+    - [x] Update base HTML background and text colors to the new theme.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Design System & Structural Overhaul' (Protocol in workflow.md)
 
 ## Phase 2: Asymmetrical Layouts & New Content
