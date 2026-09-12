@@ -31,3 +31,8 @@ A premium, minimalist personal portfolio designed to attract freelance clients a
 - **Typography:** Space Grotesk (headings), Inter (body), JetBrains Mono (code)
 - **Animation:** Smooth & subtle (300–500ms), Intersection Observer scroll reveals
 - **Target:** Freelance clients, business owners, startup founders
+
+---
+
+- [ ] **Track: Redesign portfolio to an organic, asymmetrical editorial style.**
+*Link: [./tracks/organic_redesign_20260912/](./tracks/organic_redesign_20260912/)*
