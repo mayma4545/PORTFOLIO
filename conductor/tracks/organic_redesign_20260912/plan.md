@@ -9,19 +9,19 @@
     - [x] Apply new font families to global elements.
     - [x] Adjust global spacing to support the editorial, airy feel.
     - [x] Update base HTML background and text colors to the new theme.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Design System & Structural Overhaul' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Design System & Structural Overhaul' (Protocol in workflow.md) [checkpoint: 7465b56]
 
 ## Phase 2: Asymmetrical Layouts & New Content
-- [ ] Task: Implement 'My Philosophy' Section
-    - [ ] Create HTML structure for the new manifesto section.
-    - [ ] Style with editorial typography and soft, organic background shapes.
-- [ ] Task: Refactor Projects Gallery to Asymmetrical Collage
-    - [ ] Rewrite HTML structure of the gallery to support overlapping cards.
-    - [ ] Apply CSS Grid/Flexbox/Positioning to create the asymmetrical, non-rigid collage look.
-    - [ ] Apply soft shapes and earthy borders to project cards.
-- [ ] Task: Implement 'Beyond Code' Section
-    - [ ] Add HTML structure for hobbies, workspace, or interests.
-    - [ ] Style as a visual gallery or scattered collage of images/text.
+- [x] Task: Implement 'My Philosophy' Section abb2f71
+    - [x] Create HTML structure for the new manifesto section.
+    - [x] Style with editorial typography and soft, organic background shapes.
+- [x] Task: Refactor Projects Gallery to Asymmetrical Collage abb2f71
+    - [x] Rewrite HTML structure of the gallery to support overlapping cards.
+    - [x] Apply CSS Grid/Flexbox/Positioning to create the asymmetrical, non-rigid collage look.
+    - [x] Apply soft shapes and earthy borders to project cards.
+- [x] Task: Implement 'Beyond Code' Section abb2f71
+    - [x] Add HTML structure for hobbies, workspace, or interests.
+    - [x] Style as a visual gallery or scattered collage of images/text.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Asymmetrical Layouts & New Content' (Protocol in workflow.md)
 
 ## Phase 3: Animations, Easter Eggs & Polish
