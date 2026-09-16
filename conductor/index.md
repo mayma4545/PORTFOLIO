@@ -34,5 +34,5 @@ A premium, minimalist personal portfolio designed to attract freelance clients a
 
 ---
 
-- [ ] **Track: Redesign portfolio to an organic, asymmetrical editorial style.**
+- [~] **Track: Redesign portfolio to an organic, asymmetrical editorial style.**
 *Link: [./tracks/organic_redesign_20260912/](./tracks/organic_redesign_20260912/)*
