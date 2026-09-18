@@ -14,3 +14,8 @@
 *Link: [./tracks/portfolio_dynamic_20260918/](./tracks/portfolio_dynamic_20260918/)*
 
 ---
+
+---
+
+- [ ] **Track: Update template portfolio with personal info and dynamic GitHub project previews**
+*Link: [./tracks/personal_portfolio_20260918/](./tracks/personal_portfolio_20260918/)*
